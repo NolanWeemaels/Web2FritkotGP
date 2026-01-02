@@ -223,7 +223,7 @@ function initAuthPage() {
 
     try {
       const body = mode === "register" ? { username, email, password } : { email, password };
-      const data = await api(`./auth/${mode}`, { method: "POST", body });
+      const data = await api(`/auth/${mode}`, { method: "POST", body });
 
       setToken(data.token);
       setUser(data.user);

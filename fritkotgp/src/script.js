@@ -283,8 +283,8 @@ async function initRaceSetupPage() {
     const slug = slugify(t.name);
     const fileKey = TEAM_FILE_MAP[t.name] || slug;
 
-    const iconSrc = `../images/teams/${fileKey}-icon.png`;
-    const carSrc  = `../images/teams/${fileKey}-car.png`;
+    const iconSrc = `./public/images/teams/${fileKey}-icon.png`;
+    const carSrc  = `./public/images/teams/${fileKey}-car.png`;
 
     return `
       <article class="team-card" data-teamid="${t._id}" data-teamname="${t.name}">

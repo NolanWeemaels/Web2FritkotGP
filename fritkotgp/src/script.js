@@ -1,5 +1,8 @@
 const API_BASE = import.meta.env.VITE_API_BASE || "https://web2-course-project-back-end-bh78.onrender.com";
 
+const ASSET_BASE = import.meta.env.BASE_URL || "/";
+const asset = (p) => `${ASSET_BASE}${String(p).replace(/^\/+/, "")}`;
+
 const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
 

@@ -107,15 +107,7 @@ function spriteFallbacks() {
 }
 
 function initHomePage() {
-  const bgm = document.getElementById("bgm");
-    if (bgm) {
-  const enableSound = () => {
-    bgm.muted = false;
-    bgm.play().catch(() => {});
-    window.removeEventListener("click", enableSound);
-  };
-  window.addEventListener("click", enableSound);
-  }
+  
   const wrap = document.getElementById("roadCars");
   if (!wrap) return;
   const carFiles = [

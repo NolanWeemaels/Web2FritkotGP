@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rules • Fritkot GP</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+
+  <body class="bg-stripes">
+    <div class="container">
+      <header class="topbar">
+        <div class="left">
+          <a class="btn btn-outline skew" href="./index.html"><span>Home</span></a>
+          <a class="btn btn-primary skew" href="./race.html"><span>Start the race</span></a>
+        </div>
+                <div class="right topbar-right">
+        <div id="authBadge" class="chip skew"><span>Not logged in</span></div>
+        <button id="logoutBtn" class="btn btn-dark skew" style="display:none;" type="button">
+            <span>Logout</span>
+        </button>
+        </div>
+      </header>
+      <main class="page">
+        <div class="panel">
+          <h1 class="h1">Rules</h1>
+          <p class="p">3 rounds, inspired by Formula 1 — but every lap includes a pitstop at a fritkot.</p>
+
+          <div class="grid2">
+            <div class="panel" style="background:rgba(0,0,0,.25);">
+              <h2 class="h2">Rounds</h2>
+              <p class="p"><b>Round 1</b>: Galmaarden (5.7 km)</p>
+              <p class="p"><b>Round 2</b>: Knokke (1.2 km)</p>
+              <p class="p"><b>Final</b>: Brussel (1.3 km)</p>
+            </div>
+            
+            <div class="panel" style="background:rgba(0,0,0,.25);">
+              <h2 class="h2">Random factors</h2>
+              <p class="p">Car speed: <b>250–300 km/h</b></p>
+              <p class="p">Pitstop: <b>20–25 seconds</b></p>
+              <p class="p">Best time replaces older results automatically.</p>
+            </div>
+          </div>
+
+          <div style="margin-top:14px; display:flex; gap:12px; flex-wrap:wrap;">
+            <a class="btn btn-primary skew" href="./race.html"><span>Continue</span></a>
+            <a class="btn btn-outline skew" href="./results.html"><span>See results</span></a>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script type="module" src="./src/script.js"></script>
+  </body>
+</html>

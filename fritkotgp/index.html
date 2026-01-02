@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>De Fritkot Grand Prix</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+
+  <body class="bg-stripes" data-page="home">
+    <audio style="display:none" autoplay>
+      <source src="./public/music/F18bitIntro.mp3" type="./audio/mpeg" />
+    </audio>
+
+    <div class="container">
+      <header class="topbar">
+        <div class="left">
+          <a class="btn btn-primary skew" href="./auth.html"><span>Log in / register</span></a>
+          <a class="btn btn-outline skew" href="./rules.html"><span>Check the rules</span></a>
+        </div>
+
+        <div class="right topbar-right">
+          <div id="authBadge" class="chip skew"><span>Not logged in</span></div>
+          <button id="logoutBtn" class="btn btn-dark skew" style="display:none;" type="button">
+          <span>Logout</span>
+          </button>
+      </div>
+      </header>
+
+      <main class="hero home-hero">
+        <section class="hero-card hero-card--home">
+          <div class="logo-wrap">
+            <img data-sprite class="logo" src="./images/logo.png" alt="Fritkot GP Logo" />
+
+            <div class="actions">
+              <a class="btn btn-primary skew" href="./race.html"><span>Start the race</span></a>
+              <a class="btn btn-outline skew" href="./results.html"><span>Check your results</span></a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <div class="home-road" aria-hidden="true">
+      <div class="home-cars">
+        <img class="home-car drive-a" src="./images/teams/mclaren-car.png" alt="" />
+        <img class="home-car drive-b" src="./images/teams/mercedes-car.png" alt="" />
+        <img class="home-car drive-c" src="./images/teams/ferrari-car.png" alt="" />
+        <img class="home-car drive-d" src="./images/teams/redbull-car.png" alt="" />
+        <img class="home-car drive-e" src="./images/teams/williams-car.png" alt="" />
+        <img class="home-car drive-f" src="./images/teams/audi-car.png" alt="" />
+      </div>
+    </div>
+
+    <script type="module" src="./src/script.js"></script>
+  </body>
+</html>

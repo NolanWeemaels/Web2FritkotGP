@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Choose your team • Fritkot GP</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+
+  <body class="bg-stripes" data-page="race">
+    <div class="container">
+      <header class="topbar">
+        <div class="left">
+          <a class="btn btn-outline skew" href="./index.html"><span>Back</span></a>
+        </div>
+
+        <div class="right topbar-right">
+        <div id="authBadge" class="chip skew"><span>Not logged in</span></div>
+        <button id="logoutBtn" class="btn btn-dark skew" style="display:none;" type="button">
+            <span>Logout</span>
+        </button>
+        </div>
+      </header>
+
+      <main class="race-setup">
+        <div class="race-hero">
+          <div class="race-logo">
+            <img data-sprite src="./images/logo2.png" alt="Logo" />
+          </div>
+          <h1 class="race-title">Choose your team</h1>
+        </div>
+        <section class="team-grid-wrap">
+          <div id="teamGrid" class="team-grid">
+          </div>
+          <p id="raceMsg" class="race-msg"></p>
+          <div class="race-start-wrap">
+            <button id="startRound1" class="btn btn-primary skew" disabled>
+              <span>Start Round 1</span>
+            </button>
+          </div>
+        </section>
+        <footer class="race-footer">
+          <a class="btn btn-primary skew" href="./index.html"><span>Go Back</span></a>
+          <a class="btn btn-outline skew" href="./rules.html"><span>Check the rules</span></a>
+        </footer>
+      </main>
+    </div>
+
+    <script type="module" src="./src/script.js"></script>
+  </body>
+</html>

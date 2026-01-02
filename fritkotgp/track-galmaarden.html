@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fritkot GP — Galmaarden</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+
+  <body data-page="track" data-city="Galmaarden" class="track-page">
+    <!-- Topbar -->
+    <header class="topbar">
+      <a class="btn btn-outline" href="./race.html">Back</a>
+
+            <div class="right topbar-right">
+        <div id="authBadge" class="chip skew"><span>Not logged in</span></div>
+        <button id="logoutBtn" class="btn btn-dark skew" style="display:none;" type="button">
+            <span>Logout</span>
+        </button>
+        </div>
+            </header>
+<div class="track-center-logo">
+  <img src="./images/logo2.png" alt="De Fritkot Grand Prix" />
+</div>
+    <main class="track-main">
+      <section class="track-board">
+        <div class="hud-row">
+          <div class="hud-pill">City: <b id="hudCity">—</b></div>
+          <div class="hud-pill">Status: <b id="hudStatus">—</b></div>
+          <div class="hud-pill">Time: <b id="hudTime">—</b></div>
+          <div class="hud-pill">Speed: <b id="hudSpeed">—</b></div>
+          <div class="hud-pill">Pit: <b id="hudPit">—</b></div>
+        </div>
+        <div class="track-map">
+          <img
+            class="track-overlay"
+            src="./images/galmaarden-track.png"
+            alt="Galmaarden track"
+            onerror="this.style.display='none'"/>
+          <div class="fritkot-dot dot-1">
+            <span class="fritkot-label">Fritkot 1</span>
+          </div>
+          <div class="fritkot-dot dot-2">
+            <span class="fritkot-label">Fritkot 2</span>
+          </div>
+          <div class="fritkot-dot dot-3">
+            <span class="fritkot-label">Fritkot 3</span>
+          </div>
+          <div class="fritkot-dot dot-4">
+            <span class="fritkot-label">Fritkot 4</span>
+          </div>
+        </div>
+        <div class="race-progress">
+          <div class="race-progress-label">Car is running the lap...</div>
+          <div class="progress">
+            <div id="progressFill" class="progress-fill"></div>
+          </div>
+
+          <button id="nextBtn" class="btn btn-primary" disabled>Next round</button>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/script.js"></script>
+  </body>
+</html>

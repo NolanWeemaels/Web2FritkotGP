@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fritkot GP — Brussel</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+
+  <body class="bg-stripes" data-page="track" data-city="Brussel">
+    <div class="container track-page">
+      <!-- TOPBAR -->
+      <header class="topbar">
+        <div class="left">
+          <a class="btn btn-outline" href="./race.html"><span>Back</span></a>
+        </div>
+
+        <div class="right topbar-right">
+  <div id="authBadge" class="chip skew"><span>Not logged in</span></div>
+  <button id="logoutBtn" class="btn btn-dark skew" style="display:none;" type="button">
+    <span>Logout</span>
+  </button>
+</div>
+      </header>
+
+      <div class="track-center-logo">
+        <img data-sprite src="./images/logo2.png" alt="De Fritkot Grand Prix" />
+      </div>
+      <main class="track-main">
+        <section class="track-board">
+          <!-- HUD -->
+          <div class="hud-row">
+            <div class="hud-pill">City: <b id="hudCity">—</b></div>
+            <div class="hud-pill">Status: <b id="hudStatus">—</b></div>
+            <div class="hud-pill">Time: <b id="hudTime">—</b></div>
+            <div class="hud-pill">Speed: <b id="hudSpeed">—</b></div>
+            <div class="hud-pill">Pit: <b id="hudPit">—</b></div>
+          </div>
+          <div class="track-map">
+            <img
+              class="track-overlay"
+              data-sprite
+              src="./images/brussel-track.png"
+              alt="Brussel track"
+            />
+            <div class="fritkot-dot dot-1"><div class="fritkot-label">Fritkot 1</div></div>
+            <div class="fritkot-dot dot-2"><div class="fritkot-label">Fritkot 2</div></div>
+            <div class="fritkot-dot dot-3"><div class="fritkot-label">Fritkot 3</div></div>
+            <div class="fritkot-dot dot-4"><div class="fritkot-label">Fritkot 4</div></div>
+            <div class="fritkot-dot dot-5"><div class="fritkot-label">Fritkot 5</div></div>
+            <div class="fritkot-dot dot-6"><div class="fritkot-label">Fritkot 6</div></div>
+            <div class="fritkot-dot dot-7"><div class="fritkot-label">Fritkot 7</div></div>
+          </div>
+          <div class="race-progress">
+            <div class="race-progress-label">
+              Car is running the lap…
+            </div>
+
+            <div class="progress">
+              <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <button class="btn btn-primary" id="nextBtn" type="button" disabled>
+              <span>Show results</span>
+            </button>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="./src/script.js"></script>
+  </body>
+</html>

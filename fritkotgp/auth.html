@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auth • Fritkot GP</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+
+  <body class="bg-stripes" data-page="auth">
+    <div class="container">
+      <header class="topbar">
+        <div class="left">
+          <a class="btn btn-outline skew" href="./index.html"><span>Home</span></a>
+          <a class="btn btn-outline skew" href="./rules.html"><span>Rules</span></a>
+        </div>
+        <div class="right topbar-right">
+  <div id="authBadge" class="chip skew"><span>Not logged in</span></div>
+  <button id="logoutBtn" class="btn btn-dark skew" style="display:none;" type="button">
+    <span>Logout</span>
+  </button>
+</div>
+      </header>
+
+      <main class="page">
+        <div class="panel" style="max-width:720px;margin:0 auto;">
+          <div class="grid2">
+            <div>
+              <h1 id="authTitle" class="h1">Log in</h1>
+              <p id="authHint" class="p">No account yet? Create one in 10 seconds.</p>
+
+              
+            </div>
+
+            <div>
+              <form id="authForm">
+                <div id="fieldUsername" class="field" style="display:none;">
+                  <label for="username">Username</label>
+                  <input id="username" placeholder="e.g. Nolan" />
+                </div>
+
+                <div class="field">
+                  <label for="email">Email</label>
+                  <input id="email" type="email" placeholder="nolan@test.be" required />
+                </div>
+
+                <div class="field">
+                  <label for="password">Password</label>
+                  <input id="password" type="password" placeholder="••••••••" required />
+                </div>
+
+                <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                  <button id="authSubmit" class="btn btn-primary" type="submit"><span>Log in</span></button>
+                  <button id="switchMode" class="btn btn-outline" type="button"><span>Switch to register</span></button>
+                </div>
+
+                <p id="authMsg" class="p" style="margin-top:10px;color:var(--gold2);"></p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script type="module">
+      import "./src/script.js";
+      document.getElementById("apiHint").textContent = import.meta.env.VITE_API_BASE || "http://localhost:3000";
+    </script>
+  </body>
+</html>
+

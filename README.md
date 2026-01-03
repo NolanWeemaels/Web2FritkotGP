@@ -56,3 +56,6 @@ and paste this inside of it: VITE_API_BASE=https://web2-course-project-back-end-
 
 - Fixing GIT problems — used in general
     [https://chatgpt.com/share/69585d2f-372c-800f-8905-72c379c8d9d8](https://chatgpt.com/share/69585d2f-372c-800f-8905-72c379c8d9d8)
+
+- Basic CSS style — used in src/style.css
+    [https://chatgpt.com/share/6957c32f-0a10-800f-80d1-059acbab77be](https://chatgpt.com/share/6957c32f-0a10-800f-80d1-059acbab77be)

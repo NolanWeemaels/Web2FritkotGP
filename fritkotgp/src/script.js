@@ -1,3 +1,32 @@
+/*
+ Sources 
+- Vite env variables (import.meta.env / VITE_API_BASE) — parts: API_BASE config
+   https://vite.dev/guide/env-and-mode.html
+ 
+- Vite static assets (public folder & asset handling) — parts: image paths for team sprites/icons
+   https://vite.dev/guide/assets.html
+ 
+- Fetch API (HTTP requests) — parts: api() helper using fetch()
+   https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+ *
+- localStorage (saving token + user) — parts: getToken/setToken/clearToken/getUser/setUser
+   https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+ *
+- sessionStorage (saving session round results) — parts: storing fgp_roundResults + fgp_teamId
+   https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
+
+- URLSearchParams (redirect after login via ?next=) — parts: initAuthPage() redirect logic
+   https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams
+
+- requestAnimationFrame (animation loop) — parts: initHomePage() car animation loop
+   https://developer.mozilla.org/en-US/docs/Web/API/Window/requestAnimationFrame
+
+- Element.dataset (data attributes) — parts: reading data-page/data-city + delete buttons data-del
+   https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset
+ */
+
+
+//Source: https://vite.dev/guide/env-and-mode.html
 const API_BASE = import.meta.env.VITE_API_BASE || "https://web2-course-project-back-end-bh78.onrender.com";
 
 const ASSET_BASE = import.meta.env.BASE_URL || "/";
@@ -36,8 +65,11 @@ function getUser() {
   }
 }
 
+//Source: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
 async function api(path, opts = {}) {
   const headers = { "Content-Type": "application/json", ...(opts.headers || {}) };
+
+  //Source: https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
   const token = getToken();
   if (opts.auth === true && token) headers.Authorization = `Bearer ${token}`;
 
@@ -106,6 +138,7 @@ function spriteFallbacks() {
   });
 }
 
+//Source: https://developer.mozilla.org/en-US/docs/Web/API/Window/requestAnimationFrame
 function initHomePage() {
   
   const wrap = document.getElementById("roadCars");
@@ -179,6 +212,7 @@ function initHomePage() {
   requestAnimationFrame(frame);
 }
 
+//Source: https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams
 function initAuthPage() {
   const modeBtn = $("#switchMode");
   const title = $("#authTitle");
@@ -241,6 +275,7 @@ function initAuthPage() {
   });
 }
 
+//Source: https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
 async function initRaceSetupPage() {
   const token = getToken();
   if (!token) {
